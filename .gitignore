@@ -1,0 +1,12 @@
+target/
+data/
+logs/
+
+.idea/
+**/**.iml
+*.log
+
+**/pom.xml.next
+**/pom.xml.branch
+**/pom.xml.tag
+**/pom.xml.backup
