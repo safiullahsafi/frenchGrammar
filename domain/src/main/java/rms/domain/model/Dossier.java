@@ -1,10 +1,17 @@
 package rms.domain.model;
 
+import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.List;
 
-public class Dossier extends BaseEntity {
+@Entity
+@Data
+public class Dossier extends BaseEntity{
+
 
     private String name;
-    private String pageNo;
-    private List<Suject> suject;
+    @OneToMany
+    private List<Subject> suject;
 }

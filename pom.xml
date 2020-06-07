@@ -20,16 +20,6 @@
 
 <dependencies>
 
-    <!-- https://mvnrepository.com/artifact/com.github.jknack/handlebars -->
-    <dependency>
-        <groupId>com.github.jknack</groupId>
-        <artifactId>handlebars</artifactId>
-        <version>4.1.2</version>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-freemarker</artifactId>
-    </dependency>
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -62,52 +52,28 @@
     </dependency>
 
 
-    <!-- https://mvnrepository.com/artifact/io.searchbox/jest -->
     <dependency>
         <groupId>io.searchbox</groupId>
         <artifactId>jest</artifactId>
         <version>6.3.1</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-feign -->
     <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-openfeign</artifactId>
         <version>2.0.0.RELEASE</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/com.netflix.feign/feign-jackson -->
     <dependency>
         <groupId>com.netflix.feign</groupId>
         <artifactId>feign-jackson</artifactId>
         <version>8.18.0</version>
     </dependency>
-<!--     <dependency>-->
-<!--        <groupId>org.springframework.security</groupId>-->
-<!--        <artifactId>spring-security-web</artifactId>-->
-<!--    </dependency>-->
-    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt -->
-<!--    <dependency>-->
-<!--        <groupId>org.springframework.security</groupId>-->
-<!--        <artifactId>spring-security-jwt</artifactId>-->
-<!--        <version>1.0.0.RELEASE</version>-->
-<!--    </dependency>-->
 
     <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>8.0.13</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
-<!--    <dependency>-->
-<!--        <groupId>org.springframework.security</groupId>-->
-<!--        <artifactId>spring-security-core</artifactId>-->
-<!--        <version>5.1.2.RELEASE</version>-->
-<!--    </dependency>-->
-    <!-- https://mvnrepository.com/artifact/org.springframework.security.oauth/spring-security-oauth2 -->
-<!--    <dependency>-->
-<!--        <groupId>org.springframework.security.oauth</groupId>-->
-<!--        <artifactId>spring-security-oauth2</artifactId>-->
-<!--        <version>2.3.4.RELEASE</version>-->
-<!--    </dependency>-->
+
 
 
 </dependencies>

@@ -9,13 +9,15 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import rms.bootstrap.controller.ControllerConfig;
+import rms.bootstrap.jpa.JpaConfig;
 
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = {"rms.infrastructure"})
 @EntityScan(basePackages = {"rms.domain.model"})
 @ComponentScan(basePackages = {"rms.infrastructure","rms.bootstrap.configuration.corsFilterConfig"})
-@Import({SwaggerConfig.class
+@Import({SwaggerConfig.class, ControllerConfig.class, JpaConfig.class
       })
 @EnableFeignClients(basePackages = {"rms.infrastructure"})
 public class Generator {

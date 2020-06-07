@@ -8,9 +8,13 @@ import java.util.List;
 
 @Entity
 @Data
-public class Unit extends BaseEntity {
+public class Subject extends BaseEntity{
 
     private String name;
+    private String pageNo;
+    private String contextNo;
+    private String contextDesc;
     @OneToMany
-    private List<Dossier> dossier;
+    private List<A_z> Az;
+
 }

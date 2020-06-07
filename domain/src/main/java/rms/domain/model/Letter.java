@@ -8,9 +8,8 @@ import java.util.List;
 
 @Entity
 @Data
-public class Unit extends BaseEntity {
+public class Letter  extends BaseEntity{
 
-    private String name;
     @OneToMany
-    private List<Dossier> dossier;
+    private List<Blank> blanks;
 }

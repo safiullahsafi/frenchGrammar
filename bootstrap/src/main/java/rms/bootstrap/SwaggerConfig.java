@@ -27,7 +27,7 @@ import static org.hibernate.validator.internal.util.CollectionHelper.newArrayLis
 @EnableSwagger2
 @Configuration
 public class SwaggerConfig {
-    @Value("${config.oauth2.accessTokenUri}")
+//    @Value("${config.oauth2.accessTokenUri}")
     private String accessTokenUri;
     @Bean
     public Docket postApi(){
@@ -36,9 +36,9 @@ public class SwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.ant("/api/**"))
-                .build()
-                .securityContexts(Collections.singletonList(securityContext()))
-                .securitySchemes(Arrays.asList(securitySchema(), apiKey(), apiCookieKey()));
+                .build();
+//                .securityContexts(Collections.singletonList(securityContext()))
+//                .securitySchemes(Arrays.asList(securitySchema(), apiKey(), apiCookieKey()));
     }
     @Bean
     public SecurityScheme apiKey() {
@@ -49,18 +49,18 @@ public class SwaggerConfig {
         return new ApiKey(HttpHeaders.COOKIE, "apiKey", "cookie");
     }
 
-    private OAuth securitySchema() {
-
-        List<AuthorizationScope> authorizationScopeList = newArrayList();
-        authorizationScopeList.add(new AuthorizationScope("read", "read all"));
-        authorizationScopeList.add(new AuthorizationScope("write", "access all"));
-
-        List<GrantType> grantTypes = newArrayList();
-        GrantType passwordCredentialsGrant = new ResourceOwnerPasswordCredentialsGrant(accessTokenUri);
-        grantTypes.add(passwordCredentialsGrant);
-
-        return new OAuth("oauth2", authorizationScopeList, grantTypes);
-    }
+//    private OAuth securitySchema() {
+//
+//        List<AuthorizationScope> authorizationScopeList = newArrayList();
+//        authorizationScopeList.add(new AuthorizationScope("read", "read all"));
+//        authorizationScopeList.add(new AuthorizationScope("write", "access all"));
+//
+//        List<GrantType> grantTypes = newArrayList();
+//        GrantType passwordCredentialsGrant = new ResourceOwnerPasswordCredentialsGrant(accessTokenUri);
+//        grantTypes.add(passwordCredentialsGrant);
+//
+//        return new OAuth("oauth2", authorizationScopeList, grantTypes);
+//    }
 
     public ApiInfo apiInfo() {
         return new ApiInfoBuilder()
