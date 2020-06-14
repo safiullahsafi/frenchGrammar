@@ -1,4 +1,4 @@
-package com.language.grammar;
+package com.language.grammar.configuration;
 
 
 import org.springframework.context.annotation.Bean;
@@ -27,7 +27,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.ant("/api/**"))
+                .paths(PathSelectors.ant("/**"))
                 .build();
 //                .securityContexts(Collections.singletonList(securityContext()))
 //                .securitySchemes(Arrays.asList(securitySchema(), apiKey(), apiCookieKey()));
