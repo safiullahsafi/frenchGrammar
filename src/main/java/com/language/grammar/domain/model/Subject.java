@@ -3,6 +3,7 @@ package com.language.grammar.domain.model;
 
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.util.List;
@@ -15,7 +16,7 @@ public class Subject extends BaseEntity {
     private String pageNo;
     private String contextNo;
     private String contextDesc;
-    @OneToMany
+    @OneToMany(cascade = {CascadeType.ALL})
     private List<A_z> Az;
 
 }

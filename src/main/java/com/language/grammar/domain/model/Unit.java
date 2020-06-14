@@ -3,6 +3,7 @@ package com.language.grammar.domain.model;
 
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.util.List;
@@ -12,6 +13,6 @@ import java.util.List;
 public class Unit extends BaseEntity {
 
     private String name;
-    @OneToMany
+    @OneToMany(cascade = {CascadeType.ALL})
     private List<Dossier> dossier;
 }
